@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hanken Grotesk", Arial, sans-serif;
+  background-color: #262626;
+  color: #D9D9D9;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+main{
+  max-width: 594px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header{
+  text-align: center;
+}
+header > h1 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #F9F4DA;
+}
+
+header > p {
+  font-size: 0.875rem;
+  max-width: 350px;
+  color: #8E8E8E;
+}
+.status-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #F9F4DA;
+  border-radius: 4px;
+  margin-block: 30px;
+  width: 80%;
+  min-height: 60px;
+}
+.won {
+  background-color: #10A95B;
+}
+
+.lost {
+  background-color: #BA2A2A;
+}
+.farewell{
+  background-color: #7A5EA7;
+  border: 1px dashed #323232;
+}
+.status-section > p {
+  margin: 5px;
+}
+.status-section > h2 {
+  font-size: 1.25rem;
+  margin: 5px;
+  text-align: center;
+}
+.language-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  justify-self: center;
+  max-width: 350px;
+}
+.chips{
+  border-radius: 3px;
+  padding: 4.5px;
+  position: relative;
+}
+div.chips.lost::before {
+  content: "💀";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.each-letter{
+  width: 40px;
+  height: 40px;
+  border-bottom: 1px solid #F9F4DA;
+  background: #323232;
+  font-size: 1.125rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.non-guessed{
+  color: #EC5D49;
+}
+.letters-case{
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2px;
+}
+.eachAlpha{
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #D7D7D7;
+  background: #FCBA29;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.alpha-case{
+  margin-top: 64px;
+  max-width: 480px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 36px;
+}
+button.new-game {
+  background-color: #11B5E5;
+  border: 1px solid #D7D7D7;
+  border-radius: 4px;
+  width: 225px;
+  height: 40px;
+  padding: 6px 12px;
+  display: block;
+  margin-inline: auto;
+  cursor: pointer;
+}
+.correct{
+  background: #10A95B;
+}
+.notCorrect{
+  background: #EC5D49;
+}
